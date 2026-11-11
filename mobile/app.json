@@ -1,0 +1,46 @@
+{
+  "expo": {
+    "name": "EcoMap Jundiaí",
+    "slug": "ecomap-jundiai",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "ecomap",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "br.edu.ecomap.jundiai"
+    },
+    "android": {
+      "package": "br.edu.ecomap.jundiai",
+      "adaptiveIcon": {
+        "backgroundColor": "#EAF7EF"
+      },
+      "permissions": ["ACCESS_COARSE_LOCATION", "ACCESS_FINE_LOCATION", "CAMERA", "READ_MEDIA_IMAGES"]
+    },
+    "web": {
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Permita que o EcoMap use sua localização para mostrar pontos e ocorrências próximos."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Permita que o EcoMap acesse uma imagem para anexá-la a uma ocorrência.",
+          "cameraPermission": "Permita que o EcoMap use a câmera para registrar uma ocorrência."
+        }
+      ],
+      "expo-secure-store"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
